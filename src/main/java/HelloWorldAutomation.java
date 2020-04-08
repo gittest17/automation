@@ -12,7 +12,9 @@ public class HelloWorldAutomation {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(baseURL);
+        driver.manage().window().maximize();
         System.out.println(driver.getTitle());
+        driver.quit();
     }
 
     public static void main(String[] args) {
