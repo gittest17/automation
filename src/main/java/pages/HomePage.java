@@ -23,6 +23,11 @@ public class HomePage {
         return new DropDownPage(driver);
     }
 
+    public HoversPage clickHovers(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
